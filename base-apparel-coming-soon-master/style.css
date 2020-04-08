@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left {
+  padding: 0 40px 0 124px;
+  width: 57.802%;
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-size: cover;
+}
+.right {
+  width: 42.198%;
+}
+.bg-image {
+  background-image: url("./images/hero-desktop.jpg");
+  background-size: cover;
+}
+.logo {
+  margin: 60px 0;
+}
+.bg-mobile {
+  display: none;
+}
+.content {
+  max-width: 450px;
+}
+h1 {
+  margin: 44px 0 15px 0;
+  font-size: 55px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  color: hsl(0, 6%, 24%);
+  line-height: 1.1;
+}
+h1 span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+p {
+  color: hsl(0, 36%, 70%);
+  line-height: 30px;
+}
+
+form {
+  margin-top: 30px;
+  position: relative;
+}
+input {
+  background-color: transparent;
+  border-radius: 50px;
+  border: hsl(0, 36%, 70%) solid 1px;
+  padding: 12px 25px;
+  width: 100%;
+  font-size: 14px;
+  transition: focus 2s ease;
+  letter-spacing: 1.5px;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.5);
+  border-width: 2px;
+}
+input::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+form.error input {
+  border: 2px solid hsl(0, 36%, 70%);
+}
+.btn-arrow {
+  position: absolute;
+  border: none;
+  width: 80px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-radius: 50px;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.btn-arrow:hover {
+  box-shadow: 2px 5px 10px hsla(0, 6%, 24%, 0.2);
+  opacity: 0.9;
+}
+
+.btn-error {
+  display: none;
+  position: absolute;
+  top: 10px;
+  border: none;
+  right: 90px;
+  background-color: transparent;
+}
+form.error .btn-error {
+  display: block;
+}
+
+small {
+  display: none;
+  margin-top: 10px;
+  margin-left: 25px;
+  color: hsl(0, 93%, 68%);
+}
+
+form.error small {
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+  .left {
+    width: 100%;
+  }
+  .logo {
+    width: 130px;
+    margin: 40px 0 40px -80px;
+  }
+  .content {
+    text-align: center;
+
+    margin: 100px 0 100px -60px;
+  }
+  .bg-mobile {
+    display: block;
+    margin: 0 -40px 100px -124px;
+    width: calc(100% + 164px);
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .right {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .content {
+    margin-left: -60px;
+  }
+}
