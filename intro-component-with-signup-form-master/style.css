@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: hsl(0, 100%, 74%);
+  background-image: url("./images/bg-intro-desktop.png");
+  background-size: cover;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.container > div {
+  flex: 1;
+  padding: 0 20px;
+}
+.left {
+  color: white;
+}
+.left h1 {
+  line-height: 43px;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.left p {
+  max-width: 500px;
+  line-height: 25px;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.right {
+  margin-top: 10px;
+}
+.right .free {
+  max-width: 450px;
+  background-color: hsl(248, 32%, 49%);
+  text-align: center;
+  border-radius: 5px;
+  padding: 12px 30px;
+  color: white;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.free span {
+  font-weight: 700;
+}
+
+.form {
+  background-color: white;
+  padding: 35px 35px 20px 35px;
+  border-radius: 5px;
+  max-width: 450px;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+}
+.form-control {
+  position: relative;
+  margin-bottom: 30px;
+}
+.form-control small {
+  display: none;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  font-size: 11px;
+  color: hsl(0, 100%, 74%);
+}
+.form-control img {
+  display: none;
+  position: absolute;
+  bottom: -20px;
+  right: 12px;
+  background-color: transparent;
+}
+
+.form input {
+  width: 100%;
+  padding: 14px 23px;
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+.form input:focus {
+  border: 1.3px solid hsl(248, 32%, 49%);
+  outline: none;
+}
+.form img {
+  position: absolute;
+  top: 10px;
+}
+.form label {
+  display: none;
+}
+.form button {
+  display: block;
+  width: 100%;
+  padding: 14px 23px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+  color: white;
+  background-color: hsl(154, 59%, 51%);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease;
+}
+.form button:hover {
+  outline: none;
+  border: 1px solid hsl(154, 59%, 40%);
+  opacity: 0.9;
+}
+.form button:active {
+  transform: translateY(2px);
+}
+
+.terms {
+  color: hsl(246, 25%, 77%);
+  font-size: 10px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.terms a {
+  color: hsl(0, 100%, 74%);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .container > div {
+    margin-top: 80px;
+  }
+  .form {
+    margin-bottom: 50px;
+  }
+}
